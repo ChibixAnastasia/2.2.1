@@ -19,12 +19,19 @@ public class User {
    @Column(name = "email")
    private String email;
 
+   @OneToOne
+   @MapsId
+   @Column(name = "car")
+   private Car car;
+
    public User() {}
-   
-   public User(String firstName, String lastName, String email) {
+
+   public User(Long id, String firstName, String lastName, String email, Car car) {
+      this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
+      this.car = car;
    }
 
    public Long getId() {
@@ -57,5 +64,24 @@ public class User {
 
    public void setEmail(String email) {
       this.email = email;
+   }
+
+   public Car getCar() {
+      return car;
+   }
+
+   public void setCar(Car car) {
+      this.car = car;
+   }
+
+   @java.lang.Override
+   public java.lang.String toString() {
+      return "User{" +
+              "id=" + id +
+              ", firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' +
+              ", email='" + email + '\'' +
+              ", car=" + car +
+              '}';
    }
 }
