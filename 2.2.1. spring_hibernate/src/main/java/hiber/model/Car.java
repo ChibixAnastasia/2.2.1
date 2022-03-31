@@ -14,10 +14,9 @@ public class Car {
     public Car() {
     }
 
-    public Car(String mogel, int series, User user) {
+    public Car(String mogel, int series) {
         this.mogel = mogel;
         this.series = series;
-        this.user = user;
     }
 
     public String getMogel() {
