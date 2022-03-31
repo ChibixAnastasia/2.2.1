@@ -28,7 +28,7 @@ public class MainApp {
          System.out.println("Email = "+user.getEmail());
          System.out.println();
       }
-      System.out.println(userService.getUserToCar("Audi",4).toString());
+      System.out.println(userService.getUser("Audi",4).toString());
       context.close();
    }
 }
